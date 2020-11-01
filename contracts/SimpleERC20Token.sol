@@ -6,7 +6,7 @@ contract SimpleERC20Token {
     
     address[] TokenAddressList;
 
-    string public name = "Farm or DieTicker";
+    string public name = "Farm or Die";
     string public symbol = "SKULLS";
     uint8 public decimals = 18;
 
