@@ -10,7 +10,7 @@ contract SimpleERC20Token {
     string public symbol = "SKULLS";
     uint8 public decimals = 18;
 
-    uint256 public totalSupply = 100000 * (uint256(10) ** decimals);
+    uint256 public totalSupply = 26000 * (uint256(10) ** decimals);
 
     event Transfer(address indexed from, address indexed to, uint256 value);
 
