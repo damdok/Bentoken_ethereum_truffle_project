@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<html>
+<head>
+  <title>Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/burn_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body class="body">
+<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <button id="burn" type="button">Burn</button>
+      <div class='time-frame'>
+        <div id='date-part'></div>
+        <div id='time-part'></div>
+    </div>
+    </form>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    var interval = setInterval(function() {
+        var momentNow = moment();
+        $('#date-part').html(momentNow.format('YYYY MMMM DD') + ' '
+                            + momentNow.format('dddd')
+                             .substring(0,3).toUpperCase());
+        $('#time-part').html(momentNow.format('hh:mm:ss A'));
+    }, 100);
+    
+    $('#stop-interval').on('click', function() {
+        clearInterval(interval);
+    });
+});
+</script>
+</body>
+</html>
+
